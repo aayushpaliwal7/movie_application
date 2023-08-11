@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Belanosima:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+}
+
+/* ----------------SIGNUP---------------- */
+
+.signup,
+.login {
+  text-align: center;
+}
+
+.signup h1,
+.login h1 {
+  margin: 20px auto;
+}
+
+.signup hr,
+.login hr {
+  width: 80%;
+  margin: 10px auto;
+  border: solid #3AAFA9 1px;
+}
+
+
+.signup form,
+.login form {
+  background-color: #3AAFA9;
+  width: 350px;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.signup form input,
+.login form input {
+  display: block;
+  width: 90%;
+  height: 35px;
+  margin: 8px auto;
+  padding-left: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.signup form input[type="submit"],
+.login form input[type="submit"] {
+  width: 60%;
+  margin: 25px auto 20px auto;
+}
+
+.signup form input[type="submit"]:active,
+.login form input[type="submit"]:active {
+  background-color: black;
+  color: white;
+}
+
+/*Navbar styling*/
+
+nav {
+  background-color: #3AAFA9;
+  width: 100vw;
+  height: 80px;
+  margin: auto;
+  padding: 0px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+#logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Belanosima', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+#logo a span {
+  color: white;
+  font-size: 40px;
+}
+
+#searchbar input {
+  width: 300px;
+  height: 35px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+  font-size: 15px;
+}
+
+#searchbar button {
+  background-color: #17252A;
+  color: white;
+  width: 100px;
+  height: 35px;
+  border: 1px solid #17252A;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 15px;
+}
+
+#searchbar button:hover {
+  background-color: white;
+  color: #17252A;
+}
+
+#nav-link {
+  display: flex;
+}
+
+#nav-link a {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 0px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#nav-link a:first-child,
+#nav-link a:nth-child(2) {
+  color: #17252A;
+  background-color: white;
+  padding: 8px 18px;
+  border-radius: 3px;
+}
+
+#nav-link a:first-child:hover,
+#nav-link a:nth-child(2):hover {
+  color: #17252A;
+  background-color: white;
+}
+
+#nav-link a:last-child {
+  font-size: 40px;
+  color: white;
+}
+
+
+
+
+/* Home page styling*/
+.home {
+  padding: 10px 100px;
+}
+
+.home>h1 {
+  color: #3AAFA9;
+  font-size: 35px;
+  margin: 20px 0px;
+}
+
+.movies-list {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  overflow: scroll;
+}
+
+.movies-list::-webkit-scrollbar {
+  display: none;
+}
+
+.movie {
+  background-color: #2b7a78;
+  width: 220px;
+  height: auto;
+  margin: 3px 10px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.movie a{
+  text-decoration: none;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+.movie h1 {
+  font-size: 20px;
+}
+
+.movie img {
+  width: 200px;
+  height: 250px;
+  border-radius: 7px;
+}
+
+.movie i {
+  font-size: 25px;
+  color: red;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  animation: beat 0.5s linear;
+}
+
+@keyframes beat {
+  0%{transform: scale(0.6);}
+  70%{transform: scale(1.4);}
+  100%{transform: scale(1);}
+}
+
+
+/*----------LOADING-----------------*/
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------------ADD MOVIES------------------ */
+
+.add-movie {
+  text-align: center;
+}
+
+.add-movie h1 {
+  margin: 20px auto;
+}
+
+.add-movie form {
+  background-color: #009e6f;
+  width: 450px;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.add-movie form input {
+  display: block;
+  width: 90%;
+  height: 35px;
+  margin: 8px auto;
+  padding-left: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-movie form input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.genre-options,
+.language-options {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 20% 70%;
+}
+
+.add-movie form input[type="submit"] {
+  width: 60%;
+  margin: 25px auto 20px auto;
+}
+
+.add-movie input[type="submit"]:active {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* -------------PROFILE--------------------*/
+#cover{
+  width: 100%;
+  height: 350px;
+  margin-top: -200px;
+}
+
+#profilePic{
+  width: 200px;
+  height: 200px;
+  margin-left: 200px;
+  margin-top: -100px;
+  border: solid 8px white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#profilePic:hover{
+  transform: scale(1.2);
+  border: solid 4px white;
+}
+.profile h1{
+  margin-left: 200px;
+}
+.btns{
+  margin: 20px 0px 20px 200px;
+}
+.profile button{
+  display: inline-block;
+  background-color: #009e6f;
+  margin: 20px 10px;
+  padding: 8px 20px;
+  border:  solid #009e6f 1px;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.profile button:hover{
+  background-color:white ;
+  color: #009e6f;
+}
+
+/* update profile */
+.update-profile input{
+  display: block;
+  width: 200px;
+  height: 30px;
+  margin: 8px 2px;
+  padding-left: 10px;
+  border: solid 1px #009e6f;
+}
+.update-profile input[type="submit"]{
+  padding-left: 0px;
+  background-color: #009e6f;
+  color: white;
+}
+.update-password input{
+  display: block;
+  width: 200px;
+  height: 30px;
+  margin: 8px 2px;
+  padding-left: 10px;
+  border: solid 1px #009e6f;
+}
+.update-password input[type="submit"]{
+  padding-left: 0px;
+  background-color: #009e6f;
+  color: white;
+}
+#hamberger{
+  display: none;
+}
+#hamberger i{
+  color: white;
+  font-size: 30px;
+}
+#menu{
+  background-color: rgba(0, 0, 0, 0.515);
+  padding: 10px;
+  position: absolute;
+  right: 80px;
+  top: 70px;
+  animation: menuanime 0.3s;
+}
+#menu a{
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 8px 0px;
+}
+@keyframes menuanime {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.fav-movies{
+  padding: 20px 80px;
+}
+.fav-movies h1{
+  color: #009e6f;
+}
+.fav-movies h2{
+  color: tomato;
+}
+
+
+@media (max-width:950px) 
+{
+
+  nav{
+  }
+  #nav-link{
+    display: none;
+  }
+  #hamberger{
+    display: block;
+  }
+  .home{
+    padding: 10px 20px;
+  }
+  .home>h1{
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    background-color: white;
+    color: #009e6f;
+    font-size: 30px;
+    margin: 10px 0px;
+  }
+  
+  .movies-list{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    overflow: scroll;
+  }
+  .movies-list::-webkit-scrollbar{
+    display: none;
+  }
+  .movie{
+    /* background-color: #131313; */
+    width: 220px;
+    height: auto;
+    margin: 3px 10px;
+    padding: 10px;
+    /* border: solid 0.5px rgba(0, 0, 0, 0.336); */
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .movie a{
+    text-decoration: none;
+  }
+  .movie:hover{
+    transform: scale(1.05);
+  }
+  
+  .movie h1{
+    font-size: 20px;
+    color: rgb(66, 62, 62);
+  }
+  .movie p{
+    color: rgb(61, 57, 57);
+    font-size: 20px;
+  }
+  .movie img{
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  #profilePic{
+    margin-left: 40px;
+  }
+  .profile h1{
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  .btns{
+    margin: 20px 0px 20px 40px;
+  }
+  .profile button{
+    padding: 5px 17px;
+  font-size: 14px;
+  }
+}
+@media (max-width:550px) 
+{
+  nav{
+    padding: 0px 10px;
+    justify-content: space-between;
+  }
+  #logo a{
+    font-size:19px;
+  }
+  #logo a span{
+    font-size: 27px;
+  }
+  #searchbar input{
+    width: 60%;
+    height: 30px;
+    font-size: 10px;
+    padding-left: 5px;
+  }
+  #searchbar button{
+    width: 40%;
+    font-size: 10px;
+  }
+
+
+}
